@@ -40,6 +40,8 @@ btn.addEventListener("click",  () =>{
 number.addEventListener("click", () =>{
     number.value = ""
     // range.value = ""
+      result.textContent = ""
+      result.classList.remove("show")
 })
 cancel.addEventListener("click", () =>{
     number.value = ""
