@@ -39,10 +39,10 @@ body {
 }
 
 .greeting {
-    width: 85%;
+    width: 100%;
     margin-bottom: 10px;
-    margin-left: 25px;
-    font-size: 10px;
+    /* margin-left: px; */
+    font-size: 13px;
     padding: 10px;
     border-radius: 10px;
     background-color: #e0e0e0;
