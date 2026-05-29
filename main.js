@@ -70,6 +70,8 @@ cancel.addEventListener("click", () =>{
     result.classList.remove("show")
 })
 
+
+
 const type = new Typed(".greeting",{
     strings : [message],
     typeSpeed : 90,

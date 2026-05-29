@@ -48,6 +48,7 @@ body {
     background-color: #e0e0e0;
     min-height: 3rem;
     display: block;
+    border: 1px solid #000;
 }
 
 .sub-container {
