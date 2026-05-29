@@ -9,11 +9,11 @@ const greeting = document.getElementById("greeting")
 let message = []
 let hour = new Date().getHours()
 if(hour < 12){
-    greeting.textContent= " good Morning, learn your times-table here."
+    message = " good Morning, learn your times-table here."
 }else if(hour < 18){
-    greeting.textContent= "Good Afternoon, learn your times-table here."
+    message = "Good Afternoon, learn your times-table here."
 }else{
-    greeting.textContent= " good evening, learn your times-table here."
+    message = " good evening, learn your times-table here."
 }
 
 
@@ -33,12 +33,17 @@ if(hour < 12){
 
 
 btn.addEventListener("click",  () =>{
-    let value = number.value 
-    let table = multiplicationTimetable(value)
+let value = number.value 
+let table = multiplicationTimetable(value)
+
+
+ if(number.trim() === ""){
+          result.classList.remove("show")
+    }else{
     result.textContent = table
     result.classList.remove("hide")
     result.classList.add("show")
- 
+    }
 })
 
 number.addEventListener("click", () =>{
@@ -54,9 +59,10 @@ cancel.addEventListener("click", () =>{
 })
 
 const type = new Typed(".greeting",{
-    Strings : greeting,
-    typeSpeed : 50,
-    backSpeed : 50,
+    strings : [message],
+    typeSpeed : 90,
+    backSpeed : 20,
     smartBackspace : false,
     loop : true,
+    showCursor: false,
 })
