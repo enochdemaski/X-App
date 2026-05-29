@@ -3,17 +3,21 @@ const result = document.getElementById("result")
 const btn = document.getElementById("btn")
 const range = document.getElementById("range")
 const cancel = document.getElementById("cancel")
-const greeting = document.getElementById("greeting")
 
+// GREETING
+const greeting = document.getElementById("greeting")
+let message = []
 let hour = new Date().getHours()
 if(hour < 12){
-    greeting.textContent = " good Morning, learn your times-table here."
+    greeting.textContent= " good Morning, learn your times-table here."
 }else if(hour < 18){
-    greeting.textContent = "Good Afternoon, learn your times-table here."
+    greeting.textContent= "Good Afternoon, learn your times-table here."
 }else{
-    greeting.textContent = " good evening, learn your times-table here."
+    greeting.textContent= " good evening, learn your times-table here."
 }
 
+
+// FUNCTION
    function multiplicationTimetable(num){
     let rangeValue = range.value
 
@@ -39,13 +43,20 @@ btn.addEventListener("click",  () =>{
 
 number.addEventListener("click", () =>{
     number.value = ""
-    // range.value = ""
-      result.textContent = ""
-      result.classList.remove("show")
+    result.textContent = ""
+    result.classList.remove("show")
 })
 cancel.addEventListener("click", () =>{
     number.value = ""
     range.value = ""
     result.textContent = ""
     result.classList.remove("show")
+})
+
+const type = new Typed(".greeting",{
+    Strings : greeting,
+    typeSpeed : 50,
+    backSpeed : 50,
+    smartBackspace : false,
+    loop : true,
 })
