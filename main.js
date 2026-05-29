@@ -32,18 +32,30 @@ if(hour < 12){
 
 
 
-btn.addEventListener("click",  () =>{
+btn.addEventListener("click", () =>{
 let value = number.value 
 let table = multiplicationTimetable(value)
 
 
- if(number.trim() === ""){
+ if(number.value.trim() === ""){
           result.classList.remove("show")
+          result.classList.add("hide")
+          number.classList.add("error")
+          range.classList.add("error")
     }else{
     result.textContent = table
     result.classList.remove("hide")
     result.classList.add("show")
+     number.classList.add("accept")
+     range.classList.add("accept")
     }
+})
+
+number.addEventListener("input", ()=>{
+      number.classList.add("accept")
+})
+range.addEventListener("input", ()=>{
+     range.classList.add("accept")
 })
 
 number.addEventListener("click", () =>{
